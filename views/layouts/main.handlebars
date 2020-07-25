@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Cats!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/cats.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{!-- Import Google Icon Font --}}
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	{{!-- Import materialize.css --}}
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	{{!-- Let browser know website is optimized for mobile --}}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	{{!-- styling for now  --}}
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	{{!-- title to show in the tab  --}}
+	<title>Burgers</title>
+	{{!-- jquery for the page  --}}
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	{{{ body }}}
+</body>
+	{{!-- front end js  --}}
+	<script src="/assets/js/cats.js"></script>
+	{{!-- JavaScript at end of body for optimized loading --}}
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
 </html>
