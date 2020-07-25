@@ -1,12 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col s12">
+    <div class="col-sm-12 text-center">
       <h1>Burgers!</h1>
+
+    <img src="https://img.delicious.com.au/bMm1SsuG/del/2015/11/solid-gold-burger-23751-3.jpg" class="img-fluid rounded" alt="Responsive image">
     </div>
-  </div>
-  <div class="row">
-    <div class="col s4">
-      <h2>Cats that are not sleepy!</h2>
+    <div class="col-sm-6 bg-info rounded-lg mt-4">
+      
+
+      <h3>Burgers to eaten!</h3>
+
       <ul>
         {{#each cats}}
         {{#unless sleepy}}
@@ -15,8 +18,11 @@
         {{/each}}
       </ul>
     </div>
-    <div class="col s4">
-      <h2>Cats that are sleepy!</h2>
+    <div class="col-sm-6 bg-secondary rounded-lg mt-4">
+
+
+      <h3>Burgers to eat!</h3>
+
       <ul>
         {{#each cats}}
         {{#if sleepy}}
@@ -25,34 +31,26 @@
         {{/each}}
       </ul>
     </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <h2>Add a Cat</h2>
-      <form class="create-form">
+    <div class="col-sm-12">
 
-        <div class="form-group">
-          <label for="ca">Cat Name:</label>
+
+      <h2>Add a Burger</h2>
+      <form class="create-form form-row">
+
+        <div class="form-group col-sm-6">
+          <label for="ca">Burger Name:</label>
           <input type="text" id="ca" name="name">
+          <button class="btn btn-secondary" type="submit">Add Burger</button>
         </div>
 
-        <div class="form-group">
-          <label for="slee">Sleepy?</label><br>
+        <div class="form-group col-sm-6">
+          <label for="sleepy">Sleepy?</label><br>
           <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
           <input type="radio" name="sleepy" value="0"> Awake
         </div>
 
-        <button type="submit">Add Cat</button>
+        
       </form>
     </div>
   </div>
 </div>
-
-
-
- <div class="container">
-            <div class="row">
-                <div class="col-sm-12">	{{{ body }}}</div>
-                <div class="col-sm-6">hello</div>
-            </div>
-        </div>
