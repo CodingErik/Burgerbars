@@ -5,6 +5,7 @@ const orm = require("../config/orm.js");
 // theres only one model the catmodel;
 const burger = {
   all: function(cb) {
+    // need to change the table name 
     orm.all("cats", function(res) {
       cb(res);
     });

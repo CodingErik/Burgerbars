@@ -27,7 +27,7 @@ $(function() {
 
     // make a new object with the values 
     var newCat = {
-      // this targets the stting input 
+      // this targets the input value
       name: $("#ca").val().trim(),
       // this targets the sleepy position 
       sleepy: $("[name=sleepy]:checked").val().trim()
@@ -50,6 +50,7 @@ $(function() {
     );
   });
 
+  // DONE! 
   $(".remove-burger").on("click", function(event) {
     event.preventDefault(); 
     var id = $(this).data("id");
