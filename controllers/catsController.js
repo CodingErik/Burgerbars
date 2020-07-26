@@ -17,14 +17,19 @@ router.get("/", function(req, res) {
   });
 });
 
+// this gets smacked by the form data 
 router.post("/api/cats", function(req, res) {
-  cat.create([
-    "name", "sleepy"
-  ], [
-    req.body.name, req.body.sleepy
-  ], function(result) {
+  // we recieve the data in the req.body 
+  // key values name && sleepy 
+  // cat.create take a column , value , && callback  
+  cat.create([ "name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
+    // testing the the result 
+    // console.log(result)
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    // accessing the inserId property from the result object 
+    // res.json({ id: result.insertId });f
+    // sending 200 status okay 
+    res.sendStatus(200); 
   });
 });
 

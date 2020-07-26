@@ -1,5 +1,7 @@
+// require express into the project 
 const express = require("express");
 
+// short circuiting the port 
 const PORT = process.env.PORT || 8080;
 
 const app = express();
@@ -18,7 +20,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/catsController.js");
+const routes = require("./controllers/catsController.js");
 
 app.use(routes);
 

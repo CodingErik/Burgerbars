@@ -22,22 +22,29 @@ $(function() {
   });
 
   $(".create-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
+    // prevent the page from reloading
     event.preventDefault();
 
+    // make a new object with the values 
     var newCat = {
+      // this targets the stting input 
       name: $("#ca").val().trim(),
+      // this targets the sleepy position 
       sleepy: $("[name=sleepy]:checked").val().trim()
     };
 
     // Send the POST request.
+    // here we do a post request
     $.ajax("/api/cats", {
+      // type POST 
       type: "POST",
+      // we put the object data here 
       data: newCat
     }).then(
       function() {
-        console.log("created new cat");
-        // Reload the page to get the updated list
+        // we console log that is has been created
+        console.log("created new burger");
+        // reload the page to see the update
         location.reload();
       }
     );
