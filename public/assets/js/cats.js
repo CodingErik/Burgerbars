@@ -9,7 +9,7 @@ $(function() {
     };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/burger/" + id, {
       type: "PUT",
       data: newSleepState
     }).then(
@@ -35,7 +35,7 @@ $(function() {
 
     // Send the POST request.
     // here we do a post request
-    $.ajax("/api/cats", {
+    $.ajax("/api/burger", {
       // type POST 
       type: "POST",
       // we put the object data here 
@@ -50,15 +50,16 @@ $(function() {
     );
   });
 
-  $(".delete-cat").on("click", function(event) {
+  $(".remove-burger").on("click", function(event) {
+    event.preventDefault(); 
     var id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/burger/" + id, {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted cat", id);
+        console.log("deleted burger", id);
         // Reload the page to get the updated list
         location.reload();
       }
