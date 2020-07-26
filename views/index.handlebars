@@ -11,9 +11,9 @@
       <h3>Burgers to eat!</h3>
 
       <ul>
-        {{#each cats}}
+        {{#each burgers}}
         {{#unless devoured}}
-        {{> cats/cat-block devoured=true}}
+        {{> cats/cats-block devoured=true}}
         {{/unless}}
         {{/each}}
       </ul>
@@ -24,9 +24,9 @@
       <h3>Burgers eaten!</h3>
 
       <ul>
-        {{#each cats}}
+        {{#each burgers}}
         {{#if devoured}}
-        {{> cats/cat-block devoured=false}}
+        {{> cats/cats-block devoured=false}}
         {{/if}}
         {{/each}}
       </ul>

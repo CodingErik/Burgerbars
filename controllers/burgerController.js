@@ -9,7 +9,7 @@ const burger = require("../models/burger.js");
 router.get("/", function(req, res) {
   burger.all(function(data) {
     let hbsObject = {
-      cats: data
+      burgers: data
     };
     console.log(hbsObject);
   // THIS IS WHERE we send back the data
