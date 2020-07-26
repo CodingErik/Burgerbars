@@ -1,9 +1,9 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-sleep").on("click", function(event) {
+    event.preventDefault(); 
     var id = $(this).data("id");
     var newSleep = $(this).data("newsleep");
-
     var newSleepState = {
       sleepy: newSleep
     };
@@ -26,11 +26,11 @@ $(function() {
     event.preventDefault();
 
     // make a new object with the values 
-    var newCat = {
+    var newBurger = {
       // this targets the input value
       name: $("#ca").val().trim(),
       // this targets the sleepy position 
-      sleepy: $("[name=sleepy]:checked").val().trim()
+      // devoured: $("[name=sleepy]:checked").val().trim()  // 1 // 0 
     };
 
     // Send the POST request.
@@ -39,7 +39,7 @@ $(function() {
       // type POST 
       type: "POST",
       // we put the object data here 
-      data: newCat
+      data: newBurger
     }).then(
       function() {
         // we console log that is has been created

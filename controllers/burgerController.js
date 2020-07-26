@@ -22,7 +22,7 @@ router.post("/api/burger", function(req, res) {
   // we recieve the data in the req.body 
   // key values name && sleepy 
   // cat.create take a column , value , && callback  
-  burger.create([ "name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
+  burger.create([ "name"], [req.body.name], function(result) {
 
 
     res.sendStatus(200); 
@@ -35,7 +35,7 @@ router.put("/api/burger/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.update({
-    sleepy: req.body.sleepy
+    devoured: true
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
